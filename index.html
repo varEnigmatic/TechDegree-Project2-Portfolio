@@ -5,32 +5,35 @@
    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sam Atkinson | Portfolio </title>
    	<link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,700italic%7CPoiret+One' rel='stylesheet' type='text/css'>
    	<link rel="stylesheet" href="css/my-styles.css">
    </head>
 
 <body id="top">
                   <!-- MAIN HEADER AND NAV -->
 	<header class="main-header">
-       <h1 class="logo-name">Sam Modeste Atkinson</h1>
+       <div class="container">
+       <h1 class="profile-name">Sam Modeste Atkinson</h1>
         <nav class="main-nav">
            <ul>
-             <li>HOME</li>
-             <li>PORTFOLIO</li>
-             <li>SKILLS</li>
-             <li>CONTACT</li> 
+             <li><a href="#top">HOME</a></li>
+             <li><a href="#portfolio">PORTFOLIO</a></li>
+             <li><a href="#skills">SKILLS</a></li>
+             <li><a href="#contact">CONTACT</a></li> 
           </ul>
         </nav>
+       </div>
 	</header>
                 <!-- MAIN HEADER AND NAV END -->
     
                         <!-- ABOUT-ME --> 
 <div class="about-me">
     <!-- CONTAINER ABOUT-ME --> 
-   <div class="container">
+   <div class="container group">
    
-   <img src="img/.jpg"/>
-   <p>
-   Hi! I'm a front-end developer who loves reponsive design and css. I recently finished a degree in front-end web developement at Treehouse and am excited to put all my skills to use!
+   <img class="profile-image" src="img/my-Profile_Image.jpg" alt="Sam Modeste Atkinson"/>
+   <p class="aboutMe-col">
+   Hi! I'm a front-end developer who loves reponsive design and css. I recently finished a degree in front-end web developement at <span class="treehouse">Treehouse</span> and am excited to put all my skills to use!
    
    
    </p>
@@ -43,9 +46,9 @@
                       <!-- ABOUT-ME END --> 
                       
                        <!-- PORTFOLIO  --> 
-         <div id="portflio">
+         <div id="portfolio">
            <!-- CONTAINER PORTFOLIO --> 
-             <div class="container">  
+             <div class="container group">  
                 <h1 class="section-title">PORTFOLIO</h1> 
                     <article class="col">     
                       <img src="img/portfolio-1.png" alt="Image of a marketing page"/>
@@ -101,17 +104,61 @@
                         <!-- PORTFOLIO END --> 
                         
                         
+                        
+                        <!-- SKILLS  --> 
+         <div id="skills">
+           <!-- CONTAINER SKILLS --> 
+             <div class="container group">  
+                <h1 class="section-title">SKILLS</h1> 
+                    <article class="col">     
+                      <img src="img/portfolio-7.png" alt="Image of a marketing page"/>
+                      <h2>Video Showreel Page</h2>
+                      <p>
+                      This project shows a video edited showreel for a production company's musical performance. 
+                      
+                      </p>
+                      </article>  
+                      
+                      <article class="col">     
+                      <img src="img/portfolio-10.png" alt="Image of search engine page"/>
+                      <h2>Logo</h2>
+                      <p>
+                      This project shows the creation of a logo for a Muscial Theatre Workshop.
+                      
+                      </p>
+                      
+                      
+                      </article>
+                      
+                      
+                       <article class="col thirdSkill-col">     
+                      <img src="img/portfolio-11.png" alt="Image of search engine page"/>
+                      <h2>RTB Website</h2>
+                      <p>
+                      This is an image of the home page for the Muscial Theatre Workshop RTB's website.
+                      
+                      </p>
+                      
+                      
+                      </article>
+                          
+                          </div>
+                           <!-- CONTAINER SKILLS END --> 
+                      </div> 
+                        <!-- SKILLS END --> 
+                        
+                        
                         <!-- CONTACT ME --> 
                         
-      <div class="contact">
+      <div id="contact">
           <!-- CONTAINER CONTACT-ME --> 
              <div class="container">  
                        <h1 class="section-title">CONTACT</h1>
                        <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
                        
                        <ul class="contact-info">
-                       <li>Phone <span class="contact-details">01689827639</span></li>
-                       <li>Email <span class="contact-details">sammodeste@yahoo.com</span></li>
+                       <li><strong> Phone 01689827639</strong></li>
+                       <li><strong>Email sammodeste@yahoo.com</strong></li>
                        </ul>
           
              </div> 
@@ -122,20 +169,21 @@
                         
                   <!-- FAT FOOTER -->                    
     <div class="fat-footer">
-        <h1 class="logo-name">Sam Modeste Atkinson</h1>
-           <a href="#top">BACK TO TOP</a>
-        <nav class="main-nav footer-nav">
+         <div class="container">
+        <h2 class="footer-profile-name">Sam Modeste Atkinson</h2>
+           <a class="to-top" href="#top">BACK TO TOP</a>
+        <nav class="footer-nav">
            <ul>
-             <li>HOME</li>
-             <li>PORTFOLIO</li>
-             <li>SKILLS</li>
-             <li>CONTACT</li> 
+             <li><a href="#top">HOME</a></li>
+             <li><a href="#portfolio">PORTFOLIO</a></li>
+             <li><a href="#skills">SKILLS</a></li>
+             <li><a href="#contact">CONTACT</a></li> 
           </ul>
         </nav>
-      <footer>
-      <p>&copy; Sam Modeste Atkinson</p>
-      </footer>
-    
+        
+          
+     
+         </div>
     </div>                    
                         
                         
