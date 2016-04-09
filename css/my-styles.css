@@ -101,10 +101,11 @@ h2 {
 h1,
 h2,
 p,
+.main-nav a,
 .profile-name,
-.main-nav,
 .contact-info,
 .footer-profile-name,
+.footer-nav a,
 .to-top {
       text-align: center;	
 }
@@ -141,28 +142,25 @@ Base Layout Styles
 
 
 
-.main-nav ul {
-	width: 80%;
-	margin: 0 auto;
-	
-	
-}
-
-
-
-.main-nav li {
-	margin: 6px 0;
-	
+.main-nav,
+.footer-nav {
+	margin-top: 5px;
 	
 }
+
+
+
+
 
 
 .main-nav a,
 .footer-nav a {
+	display: block;
+	padding: 10px 15px;
 	font-size: 1.2em;
 	font-weight: bold;
-	padding: 0.5em 0;
 	text-shadow: 0 1px 3px #026;
+	
 	
 	
 }
@@ -187,10 +185,16 @@ Base Layout Styles
 
 
 /***** Layout Containers *****/
-.container {
+.flex-header,
+.container,
+.flex-container,
+.flex-footer {
 	padding: 1em 0;
 	
 }
+
+
+
 
 
 
@@ -343,42 +347,115 @@ MEDIA QUERIES
 
 
 @media (min-width: 768px) {
-
-
-/**NAV**/	
-
-.main-nav li {
-	display: inline-block;
-	margin: 0 12px;
-}
-
-
-
-
-/**LAYOUT CONTAINERS**/
-
-.col {
-   display: inline-block;
-   vertical-align: top;	
-}
-
-
-
-
-.col {
-	
-  width: 50%;
  
-  
+ 
+ /***Reset Elements***/
+ 
+ 
+.footer-profile-name {
+	
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 0;
 }
 
 
-.thirdSkill-col {
+
+
+.footer-nav {
 	display: block;
-	width: 50%;
-	margin: 20px auto;
+	padding-right: 15px;
+}
+
+
+.footer-nav a {
+	font-size:0.8em;
+}
+
+/***LAYOUT CONTAINERS***/
+
+/**Flexbox**/	
+
+
+
+.flex-header,
+.main-nav,
+.flex-container,
+.flex-footer,
+.footer-nav {
+	display: flex;
+}
+
+.flex-header {
+	
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.flex-container {
+	flex-wrap: wrap;
+}
+
+.col {
+	flex: 1 50%;
 	
 }
+
+
+
+.flex-footer {
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+/**FLOATS**/
+
+.profile-image{
+	float: right;
+	width: 40%;
+	margin: 0 4% 0 1%; 
+	
+}
+
+
+.aboutMe-col {
+	float: left;
+	width: 52%;
+	padding: 1em 0 0 0.5em;
+	text-align: left;
+	font-size: 1.4em;
+	margin: 0 1% 0 2%;
+	
+	
+}
+
+
+.container .col {
+	width: 50%;
+	float: left;
+	
+}
+
+
+.container .thirdSkill-col {
+	float: none;
+	display: block;
+	margin: 10px auto 0;
+}
+
+
+/** Float Clearfix **/
+
+.group {
+content: "";
+display: table;
+clear: both;	
+}
+
 
 
 
@@ -395,36 +472,13 @@ MEDIA QUERIES
 
 
 
-.profile-image{
-	float: right;
-	width: 40%;
-	margin: 0 4% 0 1%; 
-	
-}
-
-
-.aboutMe-col {
-	float: left;
-	width: 52%;
-	padding: 1em 0.5em 0;
-	text-align: left;
-	font-size: 1.4em;
-	margin: 0 1% 0 2%;
-	
-	
-}
 
 
 
 
 
-/** Float Clearfix **/
 
-.group {
-content: "";
-display: table;
-clear: both;	
-}
+
 
 
 
@@ -438,10 +492,6 @@ clear: both;
 
 
 .footer-profile-name  {
-	
-	padding-left:0.3em;
-	margin-right: -4px;
-	width: 35%;
 	font-size: 1.6em;
 	
 }
@@ -450,25 +500,10 @@ clear: both;
 
 
 
-.footer-nav {
-	display: inline-block;
-	width: 65%;
-	vertical-align: middle;
-	
-}
 
 
-.footer-nav ul {
-	width: 100%;
-	text-align: right;
-	
-}
 
 
-.footer-nav li {
-	display: inline-block;
-	margin:0 12px 0 12px;
-}
 
 
 
@@ -485,97 +520,80 @@ clear: both;
 @media (min-width: 1024px) {
 
 
-/**LAYOUT CONTAINERS**/
-
-.main-header {
-  height: 214px;	
-}
+/***LAYOUT CONTAINERS***/
 
 
-.profile-name,
-.main-nav {
-	display: inline-block;
-	
-}
-
-
-
-
-.profile-name  {
-	
-	
-	
-	width: 45%;
-	text-align: left;
-	padding-left: 1em;
-	margin-right: -4px;
-	
-	
-}
-
-
-
-
-
-.main-nav {
-	
-	
-	width: 55%;
-	
-}
-
-
-.main-nav ul {
-	width: 100%;
-	text-align: right;
-	
-}
-
-
-.main-nav li {
-	display: inline-block;
-	margin:0 10px 0 10px;
-}
-
-
-
-.main-nav a {
-	
-	padding-top: 1.2em;
-	font-size:1.2em;
-}
-
-
-
-	
+.flex-header,
+.flex-container,
+.flex-footer,	
 .container {
 	width: 80%;
 	max-width: 1400px;
 	margin: 0 auto;
 	
 }	
-	
-.col,
-.thirdSkill-col {
+
+
+
+/**Flexbox**/	
+
+.flex-header {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.col {
+	flex-basis: 33.3333%;
+
+}
+
+
+/***FLOATS***/
+
+.container .col,
+.container .thirdSkill-col {
 	width:33.3333%;
 }
 
 
 
-
-.thirdSkill-col {
-	display: inline-block;
+.container .thirdSkill-col {
+	float: left;
+	display:block;
 	margin:0;
-	
 }
+
+
 
 
 
 
 /**PAGE ELEMENTS**/
 
+.main-nav a {
+	font-size:1em;
+}
+
+
+
+
+
+.profile-name  {
+	
+	font-size: 2.1em;
+	padding: 10px 0 0 0.5em;
+	margin-left: 2%;
+	margin-bottom: 0;
+	
+}
+
+
+
+
 .aboutMe-col {
 	font-size: 1.6em;
+	line-height: 1.4;
 
 }
 
@@ -585,6 +603,8 @@ clear: both;
 	font-size: 1.5em;
 	
 }
+
+
 	
 
 }
